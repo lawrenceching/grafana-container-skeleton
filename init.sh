@@ -65,7 +65,7 @@ EOF
   curl -X POST "${GRAFANA_BASE_URL}${GRAFANA_DASHBOARD_API}" \
     -H'Accept: application/json' \
     -H'Content-Type: application/json' \
-    -d"$BODY"
+    --data-binary "@$DASHBOARD_JSON_FILE"
 
   info "Imported dashboard $DASHBOARD_JSON_FILE"
 
